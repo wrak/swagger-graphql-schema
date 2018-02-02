@@ -413,7 +413,7 @@ const constructInputType = ({ schema, typeName: inputTypeName, typesCache, isNes
 		inputType = new GraphQLUnionInputType(
 			{
 				name: typeName,
-				types: schema.anyOf.map(
+				inputTypes: schema.anyOf.map(
 					(unionPartSchema) => constructInputType(
 						{
 							schema: unionPartSchema,
@@ -531,13 +531,11 @@ const parseInputUnions = ({ schema: rootSchema, types: typesCache, discriminator
 				typesCache[schemaId] = new GraphQLUnionInputType(
 					{
 						name: `${extractTypeName(context)}Input`,
-						types: () => {
-							return schema.anyOf.map(
-								(subSchema) => {
-									return typesCache[subSchema.$$inputType];
-								}
-							)
-						},
+						inputTypes: schema.anyOf.map(
+							(subSchema) => {
+								return typesCache[subSchema.$$inputType];
+							}
+						),
 						typeKey: discriminatorFieldName,
 					}
 				);
