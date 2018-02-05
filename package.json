@@ -15,7 +15,6 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
-    "graphql": "^0.12.3",
     "json-schema-faker": "^0.5.0-rc12",
     "json-schema-ref-parser": "^4.0.4",
     "perfy": "^1.1.2",
@@ -28,7 +27,6 @@
   "dependencies": {
     "graphql-iso-date": "^3.3.0",
     "graphql-scalars": "^0.1.4",
-    "graphql-tag": "^2.6.1",
     "graphql-tools-types": "^1.1.13",
     "graphql-type-json": "^0.1.4",
     "graphql-union-input-type": "^0.3.1",
